@@ -93,6 +93,10 @@ QToolTip {
     font-size: 13px;
 }
 
+QScrollBar {
+    background-color: transparent;
+}
+
 QScrollBar:vertical {
     background-color: transparent;
     width: 12px;
@@ -223,6 +227,6 @@ QCheckBox::indicator:unchecked {
 }
 
 #list-graphics-view {
-    background-color: transparent;
+    background-color: #373835;
     border: none;
 }
