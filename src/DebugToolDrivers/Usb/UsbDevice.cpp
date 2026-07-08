@@ -2,6 +2,7 @@
 
 #include <libusb-1.0/libusb.h>
 #include <array>
+#include <cassert>
 #include <thread>
 
 #include "src/Logger/Logger.hpp"

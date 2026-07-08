@@ -567,7 +567,7 @@ void Application::checkBloomVersion() {
 
     auto urlQuery = QUrlQuery{
         {"current", QString::fromStdString(currentVersionNumber.toString())},
-        {"date", QDate::fromString(__DATE__, "MMM dd yyyy").toString("yyyy-MM-dd")},
+        {"date", QDate::fromString(QString{__DATE__}.simplified(), "MMM d yyyy").toString("yyyy-MM-dd")},
     };
 
 #ifndef EXCLUDE_INSIGHT
