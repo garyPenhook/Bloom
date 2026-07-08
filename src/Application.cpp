@@ -12,6 +12,7 @@
 #include <QtNetwork/QNetworkReply>
 #include <QUrl>
 #include <QUrlQuery>
+#include <QDate>
 
 #include "src/Logger/Logger.hpp"
 #include "src/Services/TargetService.hpp"
@@ -565,7 +566,8 @@ void Application::checkBloomVersion() {
     };
 
     auto urlQuery = QUrlQuery{
-        {"current", QString::fromStdString(currentVersionNumber.toString())}
+        {"current", QString::fromStdString(currentVersionNumber.toString())},
+        {"date", QDate::fromString(__DATE__, "MMM dd yyyy").toString("yyyy-MM-dd")},
     };
 
 #ifndef EXCLUDE_INSIGHT
