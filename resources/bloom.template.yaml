@@ -15,6 +15,7 @@ environments:
       ip_address: "127.0.0.1"
       port: 1442
       range_stepping: true
+      shutdown_on_detach: false
 
 insight:
   activate_on_startup: false
